@@ -23,9 +23,11 @@ header#main {
 }
 
 header#main .brand a { 
+	display: block;
 	font-family: "Pacifico";
 	font-size: 2em;
 	color: #393f4a;
+	margin-bottom: 20px;
 }
 
 /*
@@ -76,4 +78,36 @@ nav#main ul li a {
 
 nav#main ul li a:not(.button) {
 	color: #393f4a;
+}
+
+/*
+** Buttons
+*/
+
+.button {
+	padding: 14px 30px;
+	border-radius: 5px;
+}
+
+.button-primary,
+.button-primary:hover {
+	background: #3a3a3a;
+	color: #fff;
+}
+
+/*
+** Feature
+*/
+
+.feature {
+	margin-top: 20px;
+}
+
+.feature h1 {
+	font-size: 5.5em;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 70px;
+	margin-bottom: 40px;
 }
