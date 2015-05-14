@@ -38,7 +38,7 @@ header#main .brand a {
 	padding: 40px 20px;
 }
 
-.container-space {
+.container-spacy {
 	padding: 80px 20px;
 }
 
@@ -49,6 +49,47 @@ header#main .brand a {
 .background-orange {
 	background-color: #f8bc3b
 }
+
+.background-green {
+	background-color: #27ae60
+}
+
+.background-grey {
+	background-color: #3a3a3a;
+}
+
+.background-white {
+	background-color: #fff;
+}
+
+.background-red {
+	background-color: #db5940;
+}
+
+.background-yellow {
+	background-color: #fec400;
+}
+
+.background-baby-blue {
+	background-color: #7ecefd;
+}
+
+.background-pale-blue {
+	background-color: #d1e1ed;
+}
+
+.background-slate-blue {
+	background-color: #2c3e50;
+}
+
+.background-midnight {
+	background-color: #1f1f1f;
+}
+
+.background-blue {
+	background-color: #028ca6;
+}
+
 
 /*
 ** Nav
@@ -110,4 +151,58 @@ nav#main ul li a:not(.button) {
 	font-weight: 900;
 	line-height: 70px;
 	margin-bottom: 40px;
+}
+
+/*
+** Features
+*/
+.features {
+	text-align: center;
+}
+
+.features h5 {
+	font-weight: 600;
+	font-size: 1.4em;
+}
+
+.features p {
+	font-size: 80%;
+	margin-bottom: 40px;
+}
+
+.features img {
+	margin-bottom: 20px;
+}
+
+/*needed for adjust the layout of the heart image because it has a differnt size than the other images*/
+.features img#heart {
+	padding-bottom: 9px;
+}
+
+/*
+** Recent
+*/
+.recent {
+	text-align: center;
+}
+
+.recent h2 {
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 3px;
+}
+
+.recent p {
+	margin-bottom: 60px;
+	color: #96eaba;
+}
+
+.recent .item {
+	padding: 8px 0;
+	margin-top: 30px;
+
+}
+
+.recent img {
+	height: 220px;
 }
