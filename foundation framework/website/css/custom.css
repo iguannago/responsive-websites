@@ -132,8 +132,14 @@ nav#main ul li a:not(.button) {
 
 .button-primary,
 .button-primary:hover {
-	background: #3a3a3a;
+	background-color: #3a3a3a;
 	color: #fff;
+}
+
+.button-secondary,
+.button-secondary:hover {
+	background-color: #fff;
+	color: #3a3a3a;
 }
 
 /*
@@ -222,6 +228,12 @@ nav#main ul li a:not(.button) {
 
 .recent ul li a:hover {
 	border: 2px solid #fff;
+}
+
+.recent .show-more {
+	margin-top: 40px;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 /*
