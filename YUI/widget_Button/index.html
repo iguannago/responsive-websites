@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/tabview/assets/skins/night/tabview.css">
+
+
+<script>
+// If you want something a little more light-weight than a widget...
+YUI().use('button-plugin', 'button', 'button-group', 'autocomplete', 'autocomplete-highlighters', 'tabview', 'panel', function(Y){
+
+    var button = new Y.Plugin.Button.createNode("#testButton", {
+        label: "Button"
+    });
+
+
+    var button = new Y.Button({
+        srcNode: '#myButton'
+    });
+
+    Y.one('#myButton').on('click', function (e) {
+        window.alert('Hi World');
+    });
+
+    // A toggle button widget
+    var toggleButton = new Y.ToggleButton({
+        srcNode: '#myToggleButton'
+    });
+
+
+    var buttonGroup = new Y.ButtonGroup({
+        srcNode: '#container'
+    });
+
+    var tabview = new Y.TabView({
+        srcNode: '#demo'
+    });
+
+    tabview.render();
+
+    var panel = new Y.Panel({
+        srcNode: '#myPanelContent',
+        headerContent: 'Panel example',
+        width  : 400,
+        centered: true,
+        plugins      : [Y.Plugin.Drag],
+        // Make changes to the buttons through the `buttons` attribute,
+        // which takes an Array of Objects.
+        buttons: [
+            {
+                // Each object has a `value` property,
+                // which can be text or an HTML string.
+                value: "Okay",
+
+                // The `action` property takes the Function that should be
+                // executed on a click event.
+                action: function(e) {
+                    e.preventDefault();
+                    panel.hide()
+                },
+
+                // The `section` property tells where to render the button and
+                // should be `Y.WidgetStdMod.HEADER` or `Y.WidgetStdMod.FOOTER`.
+                section: Y.WidgetStdMod.FOOTER
+
+                // Optional `classNames` property to add CSS classes to the
+                // button Node.
+
+                // optional `href` property if you are linking to an URL.
+            },
+            {
+                value: "Cancel",
+                action: function(e) {
+                    e.preventDefault();
+                    panel.hide()
+                },
+                section: Y.WidgetStdMod.FOOTER
+            }
+        ],
+        modal  : true // Make the Panel modal
+
+    });
+
+    panel.render();
+
+});
+
+
+</script>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body class="yui3-skin-sam">
+    <p>Buttons</p>
+	<button id="myButton">Push Button</button>
+	<button id="testButton">Test Button</button>
+	<button id="toggleButton">Toggle Button</button>
+
+	<div id="container">
+		<p>Button Container</p>
+        <button class='yui3-button'>One</button>
+        <button class='yui3-button'>Two</button>
+        <button class='yui3-button'>Three</button>
+    </div>
+
+    <div id="demo">
+    <p>Tabview</p>
+    <ul>
+        <li><a href="#foo">foo</a></li>
+        <li><a href="#bar">bar</a></li>
+        <li><a href="#baz">baz</a></li>
+    </ul>
+    <div>
+        <div id="foo">foo content</div>
+        <div id="bar">bar content</div>
+        <div id="baz">baz content</div>
+    </div>
+    <div id="myPanelContent">
+      <p>This is my Panel</p>
+    </div>
+</div>
+</body>
+</html>
