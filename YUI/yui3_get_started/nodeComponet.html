@@ -2,18 +2,22 @@
 <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 <script>
 // Create a new YUI instance and populate it with the required modules.
-YUI().use('node', 'event', function (Y) {
+YUI().use('node', function (Y) {
 
-	var para = Y.one('#para');
-	console.log('para: ' + para);
+	var onMouseOver = function(e) {
+        var node = e.currentTarget;
+        var color = node.getStyle('color');
+        if (color == "red") {
+        	node.setStyle('color', 'green');
+        }
+        else {
+        	node.setStyle('color', 'red');
+        } 
+        	
+    };
+	
 
-	para.on('mouseover', function(e) {
-		this._node.style.display = 'none'
-		console.log('this:', this);
-		var para2 = Y.one('#para2');
-		console.log('para2:', para2);
-	    para2._node.style.display = 'visible';
-	});
+	Y.one('#demo').on('mouseover', onMouseOver);
 	
 
 	
@@ -23,19 +27,11 @@ YUI().use('node', 'event', function (Y) {
 
 <html>
 <head>
-	<style>
-		p#para2 {
-    		display: none;
-		}
-		h1  {
-    		display: none;
-		}
-	</style>
 	<title>YUI library</title>
 </head>
 <body>
-	<p id="para" >Hi World! Welcome to YUI</p>
-	<p id="para2" > HEHEHEHE This is great!</p>
-	<h1>This is my headline</h1>
+	<div id="demo">
+    <p>Click me to change my color and show some style information.</p>
+</div>
 </body>
 </html>
